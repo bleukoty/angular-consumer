@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { TelephoneNumberFormatterModule, TelephoneNumberFormatterComponent } from 'telephone-number-formatter';
 import { PhoneFormatterModule } from '@sir_koty/phone-formatter';
+
+// import { PhoneFormatterModule } from 'phone-formatter';
 import { NumberDirective, TestDirective } from './test.directive';
 // import { FormDisplayErrorDirective } from './form-display-error.directive';
 // import { FormDisplayErrorService } from './form-display-error.service';
@@ -19,7 +21,7 @@ const d = [
 ];
 
 const service = new FormErrorDisplayerService(d); // Chargement des erreurs
-//service.setErrorList(d);
+// service.setErrorList(d);
 
 @NgModule({
   declarations: [
