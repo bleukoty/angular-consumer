@@ -8,10 +8,7 @@ import { PhoneFormatterModule } from '@sir_koty/phone-formatter';
 
 // import { PhoneFormatterModule } from 'phone-formatter';
 import { NumberDirective, TestDirective } from './test.directive';
-// import { FormDisplayErrorDirective } from './form-display-error.directive';
-// import { FormDisplayErrorService } from './form-display-error.service';
-
-// import { FormErrorDisplayerDirective, FormErrorDisplayerService, FormErrorDisplayerModule } from 'form-error-displayer';
+import { DigitFormatterModule} from 'digit-formatter';
 import {FormErrorDisplayerService, FormErrorDisplayerModule} from '@sir_koty/form-error-displayer';
 const d = [
   { key: 'required_name', message: 'le champ "nom" est obiglatoire.' },
@@ -37,7 +34,8 @@ const service = new FormErrorDisplayerService(d); // Chargement des erreurs
     PhoneFormatterModule,
     FormsModule,
     ReactiveFormsModule,
-    FormErrorDisplayerModule
+    FormErrorDisplayerModule,
+    DigitFormatterModule
   ],
   //entryComponents: [TelephoneNumberFormatterComponent],
   providers: [{ provide: FormErrorDisplayerService, useValue: service}],
