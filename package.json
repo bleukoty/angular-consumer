@@ -22,7 +22,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@sir_koty/form-error-displayer": "0.0.1",
     "@sir_koty/phone-formatter": "0.0.2",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.5.1",
     "ngx-bootstrap": "^5.6.1",
     "popper.js": "^1.16.1",
