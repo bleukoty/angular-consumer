@@ -5,13 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { TelephoneNumberFormatterModule, TelephoneNumberFormatterComponent } from 'telephone-number-formatter';
 import { PhoneFormatterModule } from '@sir_koty/phone-formatter';
-import { TestOptimalComponent } from 'test-optimal';
 
 // import { PhoneFormatterModule } from 'phone-formatter';
 import { NumberDirective, TestDirective } from './test.directive';
 // import { DigitFormatterModule} from 'digit-formatter';
 import {FormErrorDisplayerService, FormErrorDisplayerModule} from '@sir_koty/form-error-displayer';
-import { DocumentViewerComponent, Test2Component , DocumentViewerModule} from 'document-viewer';
+import { DocumentViewerComponent, ShareModule } from 'document-viewer';
 import { CommonModule } from '@angular/common';
 const d = [
   { key: 'required_name', message: 'le champ "nom" est obiglatoire.' },
@@ -28,9 +27,7 @@ const service = new FormErrorDisplayerService(d); // Chargement des erreurs
     AppComponent,
     NumberDirective,
     TestDirective,
-    TestOptimalComponent,
-    Test2Component
-   // FormDisplayErrorDirective
+    DocumentViewerComponent
   ],
   imports: [
     CommonModule,
@@ -41,6 +38,7 @@ const service = new FormErrorDisplayerService(d); // Chargement des erreurs
     FormsModule,
     ReactiveFormsModule,
     FormErrorDisplayerModule,
+    ShareModule
     // DigitFormatterModule,
     // DocumentViewerModule
   ],
