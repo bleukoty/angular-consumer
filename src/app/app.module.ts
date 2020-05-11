@@ -10,7 +10,7 @@ import { PhoneFormatterModule } from '@sir_koty/phone-formatter';
 import { NumberDirective, TestDirective } from './test.directive';
 // import { DigitFormatterModule} from 'digit-formatter';
 import {FormErrorDisplayerService, FormErrorDisplayerModule} from '@sir_koty/form-error-displayer';
-import { DocumentViewerComponent, ShareModule } from 'document-viewer';
+import { DocumentViewerComponent, AsideComponent, HeaderComponent , DisplayerComponent, ShareModule } from 'document-viewer';
 import { CommonModule } from '@angular/common';
 const d = [
   { key: 'required_name', message: 'le champ "nom" est obiglatoire.' },
@@ -27,7 +27,10 @@ const service = new FormErrorDisplayerService(d); // Chargement des erreurs
     AppComponent,
     NumberDirective,
     TestDirective,
-    DocumentViewerComponent
+    DocumentViewerComponent,
+    AsideComponent,
+    HeaderComponent,
+    DisplayerComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +45,7 @@ const service = new FormErrorDisplayerService(d); // Chargement des erreurs
     // DigitFormatterModule,
     // DocumentViewerModule
   ],
- //  entryComponents: [DocumentViewerComponent],
+  entryComponents: [DocumentViewerComponent],
   providers: [{ provide: FormErrorDisplayerService, useValue: service }],
   bootstrap: [AppComponent]
 })
